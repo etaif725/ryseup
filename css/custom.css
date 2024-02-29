@@ -1,0 +1,144 @@
+span.tooltip
+{
+    position : absolute;
+    border: 1px solid beige;
+    background-color: beige;
+    display: none;
+    top: 10px;
+    left: 20px;
+}
+
+.single-janek_case_study .container.post-container{
+	max-width: 1170px;	
+}
+
+/* Request Information CSS - start */
+.page-template-request-information .request-info {
+	color: #222527!important;
+	background: #fff;
+}
+
+.page-template-request-information .hbspt-form textarea{
+	width: 100% !important;
+	height: 100%;
+}
+
+.testimonial-container {
+	width: 98% !important;
+	margin-bottom: 15px;
+	border: 1px solid rgb(0 0 0 / 10%);
+	box-shadow: rgb(0 0 0 / 10%) 5px 5px 5px;
+}
+
+.testimonial-container .heading {
+	background-color: #CCDDE6;
+	padding: 1.5rem 1rem;
+	color: #16407A;
+	margin: 0 auto;
+}
+
+.testimonial-container .video {
+	position: relative;
+}
+
+.testimonial-container .video .play-btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.testimonial-container .video .play-btn svg path {
+	fill: #fff;
+}
+
+.request-info .testimonial-container .copy {
+	padding: 1.5rem 1rem;
+}
+
+.testimonial-container .logo {
+	margin-bottom: 1.5rem;
+}
+
+.testimonial-container .title {
+	font-weight: 700;
+	font-size: 12px;
+}
+
+.testimonial-container .name {
+	font-size: 12px;
+}
+
+.key-takeaways__list {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 1.5rem;
+}
+
+.prefix {
+	vertical-align: bottom;
+}
+
+.prefix img {
+	height: 30px;
+	display: inline-block;
+}
+
+.number {
+	font-weight: 900;
+	font-size: 30px;
+	line-height: normal;
+	vertical-align: middle;
+}
+
+.suffix {
+	font-weight: 500;
+	line-height: normal;
+	#color: #EE8A22;
+	color: #555555;
+	text-transform: uppercase;
+	vertical-align: super;
+	font-size: 15px;
+}
+
+.key-takeaways__item-inner .key-takeaways__item-label {
+	font-size: 12px;
+}
+
+.slide-controlz {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.fi-slick-prev {
+	display: block;
+	background-color: transparent;
+	border: none;
+	color: #005287;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+}
+
+.fi-slick-next {
+	display: block;
+	background-color: transparent;
+	border: none;
+	color: #005287;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+}
+
+.pagingInfo {
+	font-size: 14px;
+	color: #005287;
+	font-weight: 500;
+	line-height: 22px;
+	margin: 0 15px;
+}
