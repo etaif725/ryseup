@@ -95,11 +95,16 @@
 					<img src="/img/icon/SVG/logo-main.svg" style="width: 15rem; height: 5rem;">
 					</img>
                 </a>
-                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+				<button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+					<span class="fas fa-bars text-white"></span>
+					<span class="shimmer"></span>
+				</button>
+                <!-- <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"> -->
+                    <!-- <span class="navbar-toggler-icon text"></span> -->
+                <!-- </button> -->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
+						<br>
                         <a href="/" class="nav-item nav-link active">Home</a>
                         <a href="/about" class="nav-item nav-link">About</a>
                         <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
@@ -121,11 +126,21 @@
 						<a href="/faq" class="nav-item nav-link">FAQ</a>
                         <a href="/contact" class="nav-item nav-link">Contact</a>
 						<br>
-						<a href="/appointment" class="btn btn-dark rounded-pill py-2 px-3 hidemobile">Schedule Appointment</a>
+						<a href="/appointment" class="btn rounded-pill py-2 px-3 hidemobile">
+							<button>
+								<span class="text text-white">Schedule Appointment</span>
+								<span class="shimmer"></span>
+							</button>
+						</a>
 						<br>
                     </div>
                     <div class="ms-auto d-none d-lg-block">
-                        <a href="/appointment" class="btn btn-dark rounded-pill py-2 px-3 hide">Schedule Appointment</a>
+						<a href="/appointment" class="btn rounded-pill py-2 px-3 hide">
+						<button>
+							<span class="text text-white">Schedule Appointment</span>
+							<span class="shimmer"></span>
+						</button>
+						</a>
                     </div>
                 </div>
             </nav>
@@ -230,8 +245,12 @@
                                       <br>
                                   </div>
                                   <div class="col-12 text-center">
-                                      <!-- <button class="btn btn-dark w-100 py-3" id="send" type="button">I Want to Hear More!</button> -->
-                                      <button class="btn btn-dark w-100 py-3" id="send" type="button">I Want to Hear More!</button>
+									<a href="/appointment" class="btn rounded-pill py-2 px-3">
+										<button id="send" type="button">
+											<span class="text text-white">I Want to Hear More!</span>
+											<span class="shimmer"></span>
+										</button>
+									</a>
                                   </div>
                               </div>
                           </div>
@@ -467,15 +486,20 @@
 	
 	
     <!-- About Start -->
-    <div class="container-xxl bg-dark rounded-top rounded-bottom py-5">
+    <div class="container-xxl bg-light rounded-top rounded-bottom py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container">
 			<!-- <hr class="hide fadeIn"> -->
-            <div class="text-center mx-auto wow" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium text-white">Let's Get Acquainted</p>
-                <h2 class="display-7 mb-5 text-white"><i>"Every solution we offer shares a common goal: providing you with the <u>highest possible return</u> on your sales performance investment."</i></h2>
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="fs-5 fw-medium text-dark">Let's Get Acquainted</p>
+                <h2 class="display-7 mb-5 text-dark"><i>"Every solution we offer shares a common goal: providing you with the <u>highest possible return</u> on your sales performance investment."</i></h2>
 				<div class="ms-auto d-lg-block">
-					<a class="btn btn-light rounded-pill py-3 px-5" href="/about">Learn More About RYSEUP</a>
-				</div>
+					<a href="/about" class="btn rounded-pill py-2 px-3 wow fadeInUp data-wow-delay="0.1s">
+						<button>
+							<span class="text text-white">Learn More About RYSEUP</span>
+							<span class="shimmer"></span>
+						</button>
+					</a>
+                </div>
             </div>
 			<br>
 			<!-- <hr class="hide fadeIn"> -->
@@ -586,7 +610,13 @@
                         <p class="text-white">We Send <strong> Sales Tips & Case Studies</strong> Each Month. Totally Worth It!</p>
                         <div class="text-white position-relative w-100">
                             <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" id="footeremail" name="footeremail" placeholder="Your email">
-                            <button id="footersubsc" type="button" class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+							<a href="/appointment" class="btn rounded-pill py-2 px-3">
+								<button id="footersubsc" type="button" class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">
+									<span class="text text-white">SignUp</span>
+									<span class="shimmer"></span>
+								</button>
+							</a>
+                            <!-- <button id="footersubsc" type="button" class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button> -->
                         </div>
                     </form>
 					<br>
