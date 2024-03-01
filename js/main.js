@@ -90,7 +90,7 @@ async function sendData(data) {
   try {
     console.log('Sending data to server:', data);
 
-    const response = await fetch("http://ryseup.myvnc.com:3000/leads", {
+    const response = await fetch("https://ryseupsalesmastery.com:3000/leads", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -139,12 +139,20 @@ document.addEventListener("DOMContentLoaded", function () {
           formDataObject[key] = value;
       });
 
-      // Validation logic
-      if (!formData.name || !formData.company || !formData.position || !formData.mobile || !formData.email || !formData.size || !formData.service) {
-        document.getElementById('errorMessages').innerText = 'Please fill in all the required fields.';
-        document.getElementById('errorMessages').style.display = 'block';
-        return;
-      }
+	  // Validation logic
+	  if (
+	    !formData.get('name') ||
+	    !formData.get('company') ||
+	    !formData.get('position') ||
+	    !formData.get('mobile') ||
+	    !formData.get('email') ||
+	    !formData.get('size') ||
+	    !formData.get('service')
+	  ) {
+	    document.getElementById('errorMessages').innerText = 'Please fill in all the required fields.';
+	    document.getElementById('errorMessages').style.display = 'block';
+	    return;
+	  }
 
       // Email validation
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -164,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Send data if validation passes
       try {
-        const response = await fetch("http://ryseup.myvnc.com:3000/leads/", {
+        const response = await fetch("https://ryseupsalesmastery.com:3000/leads/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -193,7 +201,7 @@ async function sendSubscriptionData(data) {
   try {
     console.log('Sending subscription data to server:', data);
 
-    const response = await fetch("http://ryseup.myvnc.com:3000/subs", {
+    const response = await fetch("https://ryseupsalesmastery.com:3000/subs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -238,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Get form data
       const formData = {
-        email: document.getElementById('subscriptionEmail').value,
+        email: document.getElementById('footeremail').value,
       };
 
       // Validation logic
