@@ -130,29 +130,31 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById('errorMessages').style.display = 'none';
       document.getElementById('successMessage').style.display = 'none';
 
-      const form = document.getElementById('LeadForm');
-      const formData = new FormData(form);
-      
-      // Convert FormData to JSON object
-      const formDataObject = {};
-      formData.forEach((value, key) => {
-          formDataObject[key] = value;
-      });
+      // Get form data
+      const formData = {
+        name: document.getElementById('name').value,
+        company: document.getElementById('company').value,
+        position: document.getElementById('position').value,
+        mobile: document.getElementById('mobile').value,
+        email: document.getElementById('email').value,
+        size: document.getElementById('size').value,
+        service: document.getElementById('service').value,
+      };
 
-	  // Validation logic
-	  if (
-	    !formData.get('name') ||
-	    !formData.get('company') ||
-	    !formData.get('position') ||
-	    !formData.get('mobile') ||
-	    !formData.get('email') ||
-	    !formData.get('size') ||
-	    !formData.get('service')
-	  ) {
-	    document.getElementById('errorMessages').innerText = 'Please fill in all the required fields.';
-	    document.getElementById('errorMessages').style.display = 'block';
-	    return;
-	  }
+      // Validation logic
+      if (
+        !formData.name ||
+        !formData.company ||
+        !formData.position ||
+        !formData.mobile ||
+        !formData.email ||
+        !formData.size ||
+        !formData.service
+      ) {
+        document.getElementById('errorMessages').innerText = 'Please fill in all the required fields.';
+        document.getElementById('errorMessages').style.display = 'block';
+        return;
+      }
 
       // Email validation
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -171,31 +173,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // Send data if validation passes
-      try {
-        const response = await fetch("https://ryseupsalesmastery.com:3000/leads/", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        });
-
-        if (response.ok) {
-          // Redirect to the thank you page
-          window.location.href = '/thank-you';
-        } else {
-          // Display error message if the server request fails
-          document.getElementById('errorMessages').innerText = 'Error submitting the form. Please try again later.';
-          document.getElementById('errorMessages').style.display = 'block';
-        }
-      } catch (error) {
-        console.error(error);
-      }
+      sendData(formData);
     });
   } else {
     console.error("Element with id 'send' not found");
   }
 });
+
 
 async function sendSubscriptionData(data) {
   try {
