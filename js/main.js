@@ -86,7 +86,7 @@
 })(jQuery);
 
 
-async function sendData(data) {
+async function sendFormData(data) {
   try {
     console.log('Sending data to server:', data);
 
@@ -98,7 +98,7 @@ async function sendData(data) {
       body: JSON.stringify(data),
     });
 
-    if (response.ok) {
+    if (response.status === 200) {
       const result = await response.json();
       console.log('Server response:', result);
 
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // Send data if validation passes
-      sendData(formData);
+      sendFormData(formData);
     });
   } else {
     console.error("Element with id 'send' not found");
@@ -193,25 +193,24 @@ async function sendSubscriptionData(data) {
       body: JSON.stringify(data),
     });
 
-    if (response.ok) {
+    if (response.status === 200) {
       const result = await response.json();
-      console.log('Server response:', result);
-
-      // Display success message
-      document.getElementById('subscriptionSuccessMessage').innerText = 'Subscription successful!';
-      document.getElementById('subscriptionSuccessMessage').style.display = 'block';
-
-      // Optionally, reset the form after successful submission
-      document.getElementById('FooterForm').reset();
-
-      // Redirect to the thank you page for subscription
-      window.location.href = '/thank-you';
-    } else {
-      console.error('Server response error:', response.status, response.statusText);
-
-      // Display error message if the server request fails
-      document.getElementById('subscriptionErrorMessages').innerText = 'Error subscribing. Please try again later.';
-      document.getElementById('subscriptionErrorMessages').style.display = 'block';
+      if (result) {
+        console.log('Server response:', result);
+        // Display success message
+        document.getElementById('subscriptionSuccessMessage').innerText = 'Subscription successful!';
+        document.getElementById('subscriptionSuccessMessage').style.display = 'block';
+        // Optionally, reset the form after successful submission
+        document.getElementById('FooterForm').reset();
+        // Redirect to the thank you page for subscription
+        window.location.href = '/thank-you';
+      } else {
+        console.error('Empty or invalid JSON response from server');
+        console.error('Server response error:', response.status, response.statusText);
+        // Display error message if the server request fails
+        document.getElementById('subscriptionErrorMessages').innerText = 'Error subscribing. Please try again later.';
+        document.getElementById('subscriptionErrorMessages').style.display = 'block';
+      }
     }
   } catch (error) {
     console.error('Error sending subscription data to server:', error);
@@ -229,9 +228,13 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById('subscriptionSuccessMessage').style.display = 'none';
 
       // Get form data
+      const emailInput = document.getElementById('footeremail');
       const formData = {
-        email: document.getElementById('footeremail').value,
+        email: emailInput.value,
       };
+
+      // Log the email value for debugging
+      console.log('Email Value:', formData.email);
 
       // Validation logic
       if (!formData.email || !validateEmail(formData.email)) {

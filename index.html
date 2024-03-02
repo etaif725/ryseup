@@ -172,7 +172,7 @@
 						<p><strong>Complete the simple form below, and a representative will reach out to you within one business day.</strong></p>
 						
                         <!-- <a class="btn btn-dark rounded-pill py-3 px-5" href="">Explore More</a> -->
-                        <form id="LeadForm" action="https://ryseupsalesmastery.com:3000/leads" method="post">
+                        <form id="LeadForm" onsubmit="sendFormData(); return false;">
                         <!-- <form id="LeadForm"> -->
                             <div id="errorMessages" class="alert alert-danger" style="display: none;"></div>
                             <div id="successMessage" class="alert alert-success" style="display: none;"></div>
@@ -245,12 +245,10 @@
                                       <br>
                                   </div>
                                   <div class="col-12 text-center">
-									<a href="/appointment" class="btn rounded-pill py-2 px-3">
 										<button id="send" type="button">
-											<span class="text text-white">I Want to Hear More!</span>
+											<span class="text text-white">Let's Talk!</span>
 											<span class="shimmer"></span>
 										</button>
-									</a>
                                   </div>
                               </div>
                           </div>
@@ -602,7 +600,7 @@
                     <a class="text-white btn btn-link" href="/faq">FAQ</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <form id="FooterForm" action="https://ryseupsalesmastery.com:3000/subs" method="post">
+                    <form id="FooterForm" onsubmit="sendSubscriptionData(); return false;">
                     <!-- <form id="FooterForm"> -->
                         <div id="subscriptionErrorMessages" class="alert alert-danger" style="display: none;"></div>
                         <div id="subscriptionSuccessMessage" class="alert alert-success" style="display: none;"></div>
@@ -610,12 +608,10 @@
                         <p class="text-white">We Send <strong> Sales Tips & Case Studies</strong> Each Month. Totally Worth It!</p>
                         <div class="text-white position-relative w-100">
                             <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" id="footeremail" name="footeremail" placeholder="Your email">
-							<a href="/appointment" class="btn rounded-pill py-2 px-3">
-								<button id="footersubsc" type="button" class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">
-									<span class="text text-white">SignUp</span>
-									<span class="shimmer"></span>
-								</button>
-							</a>
+							<button id="footersubsc" type="button" class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">
+								<span class="text text-white">SignUp</span>
+								<span class="shimmer"></span>
+							</button>
                             <!-- <button id="footersubsc" type="button" class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button> -->
                         </div>
                     </form>
