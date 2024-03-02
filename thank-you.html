@@ -8,7 +8,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <meta http-equiv="Cache-Control" content="public, max-age=3600">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://ryseupsalesmastery.com https://rysup.myvnc.com https://etaif725.github.io https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://ajax.googleapis.com https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com https://widget.trustpilot.com;">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://ryseupsalesmastery.com https://ryseupsalesmastery.com:3000 https://rysup.myvnc.com https://etaif725.github.io https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://ajax.googleapis.com https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com https://widget.trustpilot.com;">
     <meta http-equiv="Content-Security-Policy" content="object-src 'none';">
     <!-- Other meta tags and head content -->
 
@@ -204,20 +204,18 @@
                     <a class="text-white btn btn-link" href="/faq">FAQ</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
+                    <!-- <form id="FooterForm" onsubmit="sendSubscriptionData(); return false;"> -->
                     <form id="FooterForm" action="https://ryseupsalesmastery.com:3000/subs" method="post">
-                    <!-- <form id="FooterForm"> -->
                         <div id="subscriptionErrorMessages" class="alert alert-danger" style="display: none;"></div>
                         <div id="subscriptionSuccessMessage" class="alert alert-success" style="display: none;"></div>
                         <h4 class="text-white mb-4">Get Your <strong><u>Monthly Doze</u></strong> of Professional Sales Tips</h4>
                         <p class="text-white">We Send <strong> Sales Tips & Case Studies</strong> Each Month. Totally Worth It!</p>
                         <div class="text-white position-relative w-100">
                             <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" id="footeremail" name="footeremail" placeholder="Your email">
-							<a href="/appointment" class="btn rounded-pill py-2 px-3">
-								<button id="footersubsc" type="button" class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">
-									<span class="text text-white">SignUp</span>
-									<span class="shimmer"></span>
-								</button>
-							</a>
+							<button id="footersubsc" type="button" class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">
+								<span class="text text-white">SignUp</span>
+								<span class="shimmer"></span>
+							</button>
                             <!-- <button id="footersubsc" type="button" class="btn btn-light py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button> -->
                         </div>
                     </form>

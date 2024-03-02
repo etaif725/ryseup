@@ -90,13 +90,13 @@ async function sendFormData(data) {
   try {
     console.log('Sending data to server:', data);
 
-    const response = await fetch("https://ryseupsalesmastery.com:3000/leads", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+	const response = await fetch("https://ryseupsalesmastery.com:3000/leads", {
+	  method: "POST",
+	  headers: {
+		"Content-Type": "application/json",
+	  },
+	  body: JSON.stringify(data),
+	});
 
     if (response.status === 200) {
       const result = await response.json();

@@ -8,7 +8,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     <meta http-equiv="Cache-Control" content="public, max-age=3600">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://ryseupsalesmastery.com https://rysup.myvnc.com https://etaif725.github.io https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://ajax.googleapis.com https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com https://widget.trustpilot.com;">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://ryseupsalesmastery.com https://ryseupsalesmastery.com:3000 https://rysup.myvnc.com https://etaif725.github.io https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://ajax.googleapis.com https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com https://widget.trustpilot.com;">
     <meta http-equiv="Content-Security-Policy" content="object-src 'none';">
     <!-- Other meta tags and head content -->
 
@@ -172,8 +172,8 @@
 						<p><strong>Complete the simple form below, and a representative will reach out to you within one business day.</strong></p>
 						
                         <!-- <a class="btn btn-dark rounded-pill py-3 px-5" href="">Explore More</a> -->
-                        <form id="LeadForm" onsubmit="sendFormData(); return false;">
-                        <!-- <form id="LeadForm"> -->
+                        <!-- <form id="LeadForm" onsubmit="sendFormData(); return false;"> -->
+                        <form id="LeadForm" action="https://ryseupsalesmastery.com:3000/leads" method="post">
                             <div id="errorMessages" class="alert alert-danger" style="display: none;"></div>
                             <div id="successMessage" class="alert alert-success" style="display: none;"></div>
                           <div class="col-lg-12 wow" data-wow-delay="0.5s">
@@ -600,8 +600,8 @@
                     <a class="text-white btn btn-link" href="/faq">FAQ</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <form id="FooterForm" onsubmit="sendSubscriptionData(); return false;">
-                    <!-- <form id="FooterForm"> -->
+                    <!-- <form id="FooterForm" onsubmit="sendSubscriptionData(); return false;"> -->
+                    <form id="FooterForm" action="https://ryseupsalesmastery.com:3000/subs" method="post">
                         <div id="subscriptionErrorMessages" class="alert alert-danger" style="display: none;"></div>
                         <div id="subscriptionSuccessMessage" class="alert alert-success" style="display: none;"></div>
                         <h4 class="text-white mb-4">Get Your <strong><u>Monthly Doze</u></strong> of Professional Sales Tips</h4>
