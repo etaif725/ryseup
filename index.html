@@ -125,17 +125,19 @@
 	<link rel="preload" fetchpriority="high" as="image" href="/img/icon/orange/rising-orange-icon.svg">
 
 	<!-- Google tag (gtag.js) -->
-	<script src="/js/gtag.js" nonce="gtag" async></script>
-	<script>
-	    window.dataLayer = window.dataLayer || [];
-	    function gtag() {
-	        dataLayer.push(arguments);
-	    }
-	    gtag('js', new Date());
-	
-	    gtag('config', 'G-T3BDVP043E');
-	</script>
+	<!-- Load gtag.js without nonce -->
+	<script src="https://www.googletagmanager.com/gtag/js?id=G-T3BDVP043E" async></script>
 
+	<!-- Inline script with nonce for gtag config -->
+	<script nonce="gtag">
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-T3BDVP043E');
+	</script>
 </head>
 
 <body>
