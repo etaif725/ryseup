@@ -56,31 +56,4 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- Social Media Profiles (replace with actual URLs) -->
-    <url>
-        <loc>https://www.facebook.com/profile.php?id=61556825361388</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://www.youtube.com/channel/UCgB8l-G06Dy-QDdQQE-dBeA</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <!-- Add other social media URLs as needed -->
-
-    <!-- Calendly Appointment Page -->
-    <url>
-        <loc>https://calendly.com/ryseupsalesmastery/30min</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
-    <!-- Trustpilot Review Page -->
-    <url>
-        <loc>https://www.trustpilot.com/review/ryseupsalesmastery.com</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
 </urlset>
