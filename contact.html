@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-Control" content="public, max-age=31536000">
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'nonce-gtag' https://ryseupsalesmastery.com https://ryseupsalesmastery.com:3000 https://rysup.myvnc.com https://etaif725.github.io https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://ajax.googleapis.com https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com https://widget.trustpilot.com; object-src 'none';">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'nonce-gtagstreamid' 'nonce-lazyloadimages' https://ryseupsalesmastery.com https://ryseupsalesmastery.com:3000 https://rysup.myvnc.com https://etaif725.github.io https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://ajax.googleapis.com https://fonts.googleapis.com https://fonts.gstatic.com https://www.googletagmanager.com https://widget.trustpilot.com; object-src 'none'; base-uri 'self';">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 	
     <title>Contact RYSEUP | Close More Deals, Maximize Revenue & Boost Performance up to 10X!</title>
@@ -494,6 +494,23 @@
 
     <!-- Template Javascript -->
     <script src="/js/main.js" type="text/javascript"></script>
+	<script nonce="lazyloadimages">
+	  document.addEventListener("DOMContentLoaded", function() {
+		function addLazyLoad(link) {
+		  var img = new Image();
+		  img.src = link.href;
+		  img.alt = ""; // Set alt attribute if applicable
+		  img.loading = "lazy";
+		  link.parentNode.replaceChild(img, link);
+		}
+
+		// Example: Apply lazy loading to all links with rel="preload" and as="image"
+		var preloadLinks = document.querySelectorAll('link[rel="preload"][as="image"]');
+		preloadLinks.forEach(function(link) {
+		  addLazyLoad(link);
+		});
+	  });
+	</script>
 </body>
 
 </html>
